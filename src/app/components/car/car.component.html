@@ -1,7 +1,21 @@
-<table class="table">
+
+<table  class="table table-bordered">
+    <thead  style="color:#696969 ">
+        <th>Id</th>
+        <th>Marka</th>
+        <th>Renk</th>
+        <th>Model</th>
+        <th>Model Yılı</th>
+        <th>Açıklama</th>
+        <th>Günlük Fiyat</th>
+    </thead>
     <tr *ngFor="let car of cars">
-       
-        
-      
-    </tr>
+    <td>{{car.id}}</td>
+    <td>{{car.brandName}}</td>
+    <td>{{car.colorName}}</td>
+    <td>{{car.model}}</td>
+    <td>{{car.modelYear}}</td>
+    <td>{{car.description}}</td>
+    <td>{{car.dailyPrice}}</td>
+</tr>
 </table>

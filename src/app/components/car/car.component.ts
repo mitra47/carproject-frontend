@@ -11,11 +11,11 @@ import { CarResponseModel } from 'src/app/models/carResponseModel';
 export class CarComponent implements OnInit {
 
   cars:Car[] = [];
-  apiUrl="https://localhost:44367/api/cars/getall";
-   constructor(private httpClient:HttpClient) { }
+  
+   constructor() { }
 
   ngOnInit(): void {
-    console.log("Init çalıştı");
+    this.getCars();
 
   }
   getCars(){
