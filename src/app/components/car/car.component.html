@@ -1,20 +1,30 @@
-
-<table  class="table table-bordered" >
-    <thead  style="color:#696969 ">
-        <th>Id</th>
-        <th>Marka</th>
-        <th>Renk</th>
-        <th>Model Yılı</th>
-        <th>Açıklama</th>
-        <th>Günlük Fiyat</th>
-    </thead>
-    <tr *ngFor="let car of cars">
-    <td>{{car.id}}</td>
-    <td>{{car.brandName}}</td>
-    <td>{{car.colorName}}</td>
-    <td>{{car.modelYear}}</td>
-    <td>{{car.description}}</td>
-    <td>{{car.dailyPrice}}</td>
-</tr>
-</table>
-© 2021 Mitra, Inc.
+<div class="card mb-2">
+    <div class="card-header text-center">
+       <strong>Araç Listesi</strong>
+    </div>
+    <div class="card-body">
+        <table  class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Araç No</th>
+                    <th>Marka</th>
+                    <th>Renk</th>
+                    <th>Model</th>
+                    <th>Günlük Ücret</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let car of cars">
+                    <td>{{car.carId}}</td>
+                    <td>{{car.brandName}}</td>
+                    <td>{{car.colorName}}</td>
+                    <td>{{car.modelYear}}</td>
+                    <td>{{car.dailyPrice}} ₺</td>
+                    <td>{{car.description}}</td>
+                    <td><button routerLink = "/cars/brand/{{car.brandName}}/{{car.carId}}" type="button" class="btn btn-success">Detaylar</button></td>
+                </tr>
+            </tbody>
+       </table>
+   </div>
+</div>
